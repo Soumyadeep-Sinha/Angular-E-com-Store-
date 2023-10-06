@@ -1,0 +1,16 @@
+<div class="offer-image">
+    <img src="https://rukminim2.flixcart.com/flap/1500/1500/image/7c34b13b47223aef.jpg?q=50" alt="offer">
+  </div>
+  
+  <div class="container mt-3 mb-5 d-flex flex-wrap justify-content-between">
+    <div class="card mt-3" style="width: 18rem;" *ngFor="let laptop of laptops">
+      <img style="width: 200px; padding:1rem; height:auto;" src="{{laptop.thumbnailUrl}}" class="card-img-top mx-auto d-block" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{laptop.productName}}</h5>
+        <h3 class="card-text text-success">Rs. {{laptop.price - laptop.discount}}</h3>
+        <a [routerLink]="['/product', laptop.id]" class="btn btn-danger">View
+  
+        </a>
+      </div>
+    </div>
+  </div>
